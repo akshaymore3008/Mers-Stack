@@ -1,0 +1,17 @@
+.header{
+    background-color: aqua;
+    text-align: center;
+    padding: 20px;
+}
+.new-bar-list {
+    background-color: rgb(49, 172, 202);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+ul{
+    
+}
+
