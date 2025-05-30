@@ -21,6 +21,7 @@ h2{
 .project-div {
     display: flex;
     text-align: center;
+    padding: 20px;
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
@@ -28,4 +29,13 @@ h2{
 figure {
     text-align: center;
     margin: 0;
+}
+footer {
+    background-color: blueviolet;
+    color: aliceblue;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
