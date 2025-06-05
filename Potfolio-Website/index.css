@@ -29,7 +29,13 @@ h2{
 figure {
     text-align: center;
     margin: 0;
+
 }
+
+.wedding-section {
+    padding: 20px;
+}
+
 footer {
     background-color: blueviolet;
     color: aliceblue;
