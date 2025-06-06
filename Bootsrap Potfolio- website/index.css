@@ -1,0 +1,23 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #097bee;
+    color: #1f2937;
+}
+
+.navbar {
+    background-color: #1e40af;
+    
+
+.navbar-collapse {
+    margin-left: 68%;
+}
+
+.hero-section {
+    background-color: white;
+    height: 250px;
+    opacity: 0.5;
+}
+
+< !-- Google Fonts --><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+rel="stylesheet"
+/>
