@@ -1,4 +1,4 @@
-function writefullName(firstname , secondname , lastname) {
+function writefullName(firstname,secondname,lastname) {
     const fullName = firstname + secondname + lastname
     console.log(fullName);
 
