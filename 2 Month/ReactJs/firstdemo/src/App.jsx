@@ -1,43 +1,32 @@
-// if else = Jar tar jar he aseal tar te kar
-// Recate Hooks = useState , useeffect
-// component
-// event = onChange , OnClick
 import { useState } from "react";
 
-
 function App() {
-
-  const
-    [name, setName] = useState() // 1 hook
-
-  const [showname, setshowName] = useState(false)
+  const [name, setName] = useState(""); // 1 hook
+  const [showName, setShowName] = useState(false);
 
   console.log(name);
 
-  const handleOnChange = () => {
-    console.log(e.target.value, "====")
+  const handleOnChange = (e) => {
+    console.log(e.target.value);
+    setName(e.target.value);
+  };
 
-    setName(e.target.value)
-
-  }
-
-
-
-  const handelSubmit = () => {
-
-
-  }
-
+  const handleSubmit = () => {
+    setShowName(true);
+  };
 
   return (
-    <>
-      <input name="name" placeholder="Enter Your Name" onChange={handleOnChange} />
-      <button onClick={handelSubmit}>Submit</button>
+    <div>
+      <input
+        name="name"
+        placeholder="Enter Your Name"
+        onChange={handleOnChange}
+      />
+      <button onClick={handleSubmit}>Submit</button>
 
-      {
-        showname && <h1>{name}</h1>} 
-    
-  </>
+      {showName && <h1>{name}</h1>}
+    </div>
+  );
 }
 
-export default App
+export default App;
