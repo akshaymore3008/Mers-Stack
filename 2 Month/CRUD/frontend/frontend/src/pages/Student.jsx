@@ -82,20 +82,21 @@ const Student = () => {
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <td>Akshay</td>
+                                    <td>Shankar</td>
+                                    <td>More</td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
+                                   <td>1</td>
+                                    <td>Akshay</td>
+                                    <td>Shankar</td>
+                                    <td>More</td>
                                 </tr>
                                 <tr>
-                                    <td>3</td>
-                                    <td colSpan={2}>Larry the Bird</td>
-                                    <td>@twitter</td>
+                                    <td>1</td>
+                                    <td>Akshay</td>
+                                    <td>Shankar</td>
+                                    <td>More</td>
                                 </tr>
                             </tbody>
                         </Table>
