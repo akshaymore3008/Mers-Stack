@@ -1,54 +1,52 @@
-const { use } = require("react");
+const Users = require("../models/users.models");
 
 const createUser = async (req, res) => {
+  try {
+    console.log(req.body);
+    const { name, email, mobileNo, age } = req.body;
 
-};
-  try {  const {name,email,mobileNo, age } = req.body;
-
-    const UsersData = {
+    const UsersData = await Users.create({
       name,
       email,
       mobileNo,
-      age
-    };
-    await UsersData.save(UsersData);
+      age,
+    });
 
-    res.status(201).json( {data: UsersData, message: "User created successfully!" });
-   
+    res.status(201).json({ data: UsersData, message: " created User" });
   } catch (error) {
-    console.log(error)
-  };
-
-  const getUsers = async (req, res) => {
-
+    console.log(error);
+  }
 };
+const getUsers = async (req, res) => {
   try {
-   const allUsers = await Users.find();
-    res.status(201).json({ data: allUsers, message: "All users fetched successfully!" });
+    const allUsers = await Users.find();
+    res.status(201).json({ data: allUsers, message: " Get All Users data" });
   } catch (error) {
-    console.log(error)
-  };
-
-  const deletUser = async (req, res) => {
-
+    console.log(error);
+  }
 };
+const deletUser = async (req, res) => {
   try {
-   const {UserId} = req.body;
-   await users.findByIdAndDelete({ _id : UserId });
-    res.status(201).json({ message: "User deleted successfully!" });
-    
+    const { UserId } = req.query;
+
+console.log (UserId,"UserId") 
+
+    if (!UserId) {
+      return res.status(400).json({ message: "User ID is required" });
+    }
+    // Find the user by ID and delete it
+
+   const UsersData = await Users.findByIdAndDelete(UserId);
+    res.status(201).json({ message: "User deleted" });
   } catch (error) {
-    console.log(error)
-  };
-
-  const updateUser = async (req, res) => {
-
+    console.log(error);
+  }
 };
+const updateUser = async (req, res) => {
   try {
-   res.status(201).json({ message: "User updated successfully!" });
+    res.status(201).json({ message: "User updated" });
   } catch (error) {
-    console.log(error)
-  };
-module.exports = (
-    { createUser, getUsers, deletUser, updateUser }
-)
+    console.log(error);
+  }
+};
+module.exports = { createUser, getUsers, deletUser, updateUser };
