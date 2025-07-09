@@ -12,7 +12,7 @@ const {
 const app = express();
 
 // Port where the server will run
-const PORT = 5000;
+const PORT = 3003;
 
 // Middleware to parse JSON data from requests
 app.use(bodyParser.json());

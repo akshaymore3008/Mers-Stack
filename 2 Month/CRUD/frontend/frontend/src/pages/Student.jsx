@@ -33,11 +33,11 @@ const Student = () => {
       const payload = {
         firstName: firstName,
         lastName: lastname,
-        std: "10th",
-        rollNo: "50",
-        address: "Karad",
+        std: "std",
+        rollNo: "rollNo",
+        address: "address",
       };
-      const response = await axios.post("http://localhost:5000/students" , payload);
+      const response = await axios.post("http://localhost:3003/students" , payload);
 
       console.log(response.data , "====>")
 
@@ -52,11 +52,26 @@ const Student = () => {
     } catch (error) {
       console.log(error)
     }
-  }
+  };
 
   const onChangeLastname = (e) =>{
     try {
       setLastname(e.target.value)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  const onChangeStd = (e) => {
+    try {
+      setStd(e.target.value)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const onChangeRollNo = (e) => {
+    try {
+      setRollNo(e.target.value)
     } catch (error) {
       console.log(error)
     }
