@@ -46,11 +46,11 @@ const updateUser = async (req, res) => {
   try {
     const { UserId } = req.query;
     const { name, email, mobileNo, age } = req.body;
-    const updateUser = await Users.findByIdAndUpdate
-    (UserId,{ name, email, mobileNo, age })
+   await Users.findByIdAndUpdate(UserId,{ name, email, mobileNo, age })
+   
      
 
-    res.status(201).json({ data: updateUser, message: "User updated" });
+    res.status(201).json({ message: "User updated" });
   } catch (error) {
     console.log(error);
   }
