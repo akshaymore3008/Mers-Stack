@@ -29,14 +29,14 @@ const deletUser = async (req, res) => {
   try {
     const { UserId } = req.query;
 
-console.log (UserId,"UserId") 
+    console.log(UserId, "UserId");
 
     if (!UserId) {
       return res.status(400).json({ message: "User ID is required" });
     }
     // Find the user by ID and delete it
 
-   const UsersData = await Users.findByIdAndDelete(UserId);
+    const UsersData = await Users.findByIdAndDelete(UserId);
     res.status(201).json({ message: "User deleted" });
   } catch (error) {
     console.log(error);
@@ -44,7 +44,13 @@ console.log (UserId,"UserId")
 };
 const updateUser = async (req, res) => {
   try {
-    res.status(201).json({ message: "User updated" });
+    const { UserId } = req.query;
+    const { name, email, mobileNo, age } = req.body;
+    const updateUser = await Users.findByIdAndUpdate
+    (UserId,{ name, email, mobileNo, age })
+     
+
+    res.status(201).json({ data: updateUser, message: "User updated" });
   } catch (error) {
     console.log(error);
   }
