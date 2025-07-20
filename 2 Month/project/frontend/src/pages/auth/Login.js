@@ -1,30 +1,58 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-
+import React from "react";
+import loginimage from "../../assets/login-page-img.png"; // Assuming you have a login image in this path
 
 const Login = () => {
   return (
-    <div>
-<div className="container">
-</div>
-<div className="row"></div>
-<div className="col-md-6"> </div>
-     < h1>Login Page</h1>
-     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <div className="login-page">
+      <div className="container">
+        <div className="row">
+          <div className="row align-items-center justify-content-center"></div>
+          <div className="col-md-6">
+            <img src={loginimage} alt="" className="w-75" />
+          </div>
+          <div className="col-md-6" text-center>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQZCq6fOPNLpJQCws7QODSctmxzMRHvch6Ag&s" alt="" className="instagrtam-icon mb-4"/>
+            <form > 
+              <div class="form-group">
+                <input
+                  type="email"
+                  className="form-control my-2 w-50"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <small id="emailHelp" class="form-text text-muted">
+                  <br />
+                </small>
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  className="form-control my -2 w-50"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                />
+              </div>
+              <br />
+              <button type="submit" class="btn btn-primary w-50 my-2">
+                Login
+              </button>
+             
+ <div className="text-center w-50">
+  <br />
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdP6AKFlNa3Afg4RJOp7OtR7RGRrlPE2KbLg&s" alt="" className="instagrtam-icon mb-2"/>
+                 
+              </div>
+              
+          <p className="text-center w-50">Forgot Password</p>
+              <p className="text-center w-50">Don't have an account ? <b>Sign up</b></p>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
