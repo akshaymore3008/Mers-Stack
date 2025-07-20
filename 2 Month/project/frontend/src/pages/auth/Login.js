@@ -1,5 +1,6 @@
 import React from "react";
 import loginimage from "../../assets/login-page-img.png"; // Assuming you have a login image in this path
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -53,7 +54,7 @@ const Login = () => {
 
               <p className="text-center w-50">Forgot Password</p>
               <p className="text-center w-50">
-                Don't have an account ? <b>Sign up</b>
+                Don't have an account ? <b><Link to="/register"> Sign up </Link> </b>
               </p>
             </form>
           </div>
