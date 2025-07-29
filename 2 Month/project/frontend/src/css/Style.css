@@ -86,3 +86,51 @@ background: #fafafa;
  color: #8e8e8e;
 
 }
+
+
+
+.OR {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.OR::before,
+.OR::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.OR:not(:empty)::before {
+  margin-right: 0.75em;
+}
+
+.OR:not(:empty)::after {
+  margin-left: 0.75em;
+}
+
+
+.OR register {
+
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+OR register::before,
+.OR register::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.OR register:not(:empty)::before {
+  margin-right: 0.75em;
+}
+
+.OR register:not(:empty)::after {
+  margin-left: 0.75em;
+}

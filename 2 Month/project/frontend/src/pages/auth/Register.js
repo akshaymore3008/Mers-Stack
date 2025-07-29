@@ -13,11 +13,10 @@ const Register = () => {
             />
             <p>Sign up to see photos and videos from your friends.</p>
             <button className="fb-login">Log In With Facebook</button>
-            <div className="divider">
-             <div></div>
+           <div className="OR register">
               <span>OR</span>
            <div></div>
-            </div>
+</div>
             <form className="login-form">
               <div class="form-group">
                 <input

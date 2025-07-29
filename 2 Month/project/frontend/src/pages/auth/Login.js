@@ -1,5 +1,5 @@
 import React from "react";
-import loginimage from "../../assets/login-page-img.png"; // Assuming you have a login image in this path
+import loginimage from "../../assets/login-page-img.png"; 
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -42,7 +42,10 @@ const Login = () => {
               <button type="submit" class="btn btn-primary w-50 my-2">
                 Login
               </button>
-
+               <div className="OR">
+              <span>OR</span>
+           <div></div>
+</div>
               <div className="text-center w-50">
                 <br />
                 <img
